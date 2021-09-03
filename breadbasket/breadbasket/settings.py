@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-gzj6fnaabve3li(q$9b^_pl-abj309qo6&4(p9mad7n2$_j_x5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://thebreadbasket.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['thebreadbasket.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
