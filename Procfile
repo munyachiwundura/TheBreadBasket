@@ -1,1 +1,1 @@
-web: gunicorn breadbasket.breadbasket.wsgi
+web: gunicorn breadbasket/breadbasket.wsgi
