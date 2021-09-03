@@ -1,1 +1,1 @@
-web: gunicorn breadbasket.breadbasket.wsgi --log-file -
+web: gunicorn breadbasket.breadbasket.wsgi
