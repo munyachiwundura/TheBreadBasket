@@ -16,7 +16,7 @@ from oscarapi import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-STATIC_DIR = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_DIR = BASE_DIR / ''
 
 
@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-gzj6fnaabve3li(q$9b^_pl-abj309qo6&4(p9mad7n2$_j_x5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://thebreadbasket.herokuapp.com', '127.0.0.1']
+
+ALLOWED_HOSTS = ['thebreadbasket.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -89,6 +90,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -192,7 +196,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = ''
-STATIC_FILES_DIRS = [STATIC_DIR]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
