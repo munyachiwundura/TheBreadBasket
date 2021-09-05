@@ -21,6 +21,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api', include('oscarapi.urls')),
-    path('', include(apps.get_app_config('oscar').urls[0])),
+    path('api', 'oscarapi.urls'),
+    path('', apps.get_app_config('oscar').urls[0]),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
